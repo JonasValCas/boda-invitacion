@@ -1,0 +1,302 @@
+.wedding-hero {
+  position: relative;
+
+  min-height: 100vh;
+  min-height: 100svh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(48, 79, 126, 0.82),
+      rgba(148, 121, 196, 0.68)
+    ),
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=85")
+      center center / cover no-repeat;
+}
+
+/* Capa adicional para suavizar la fotografía */
+
+.wedding-hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.08),
+      rgba(48, 79, 126, 0.25)
+    );
+
+  pointer-events: none;
+}
+
+/* Contenido */
+
+.wedding-hero__content {
+  position: relative;
+  z-index: 2;
+
+  width: min(90%, 900px);
+  padding-bottom: 70px;
+
+  text-align: center;
+  color: var(--color-white);
+
+  animation: weddingHeroFadeUp 1.4s ease forwards;
+}
+
+.wedding-hero__eyebrow {
+  margin-bottom: 1.5rem;
+
+  font-size: 0.72rem;
+  font-weight: 500;
+
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+}
+
+.wedding-hero__names {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(4.5rem, 11vw, 9rem);
+
+  font-weight: 400;
+  line-height: 0.82;
+
+  letter-spacing: -0.03em;
+}
+
+.wedding-hero__ampersand {
+  display: block;
+
+  margin: 0.25rem 0;
+
+  color: var(--color-lavender-200);
+
+  font-size: 0.42em;
+  font-weight: 300;
+
+  line-height: 1.2;
+}
+
+.wedding-hero__date {
+  margin-top: 2.5rem;
+
+  font-size: 0.8rem;
+  font-weight: 400;
+
+  letter-spacing: 0.35em;
+}
+
+.wedding-hero__separator {
+  width: 55px;
+  height: 1px;
+
+  margin: 1.75rem auto;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--color-white),
+      transparent
+    );
+}
+
+.wedding-hero__message {
+  font-family: var(--font-display);
+
+  font-size: clamp(1.35rem, 3vw, 2rem);
+
+  font-weight: 300;
+  font-style: italic;
+
+  letter-spacing: 0.02em;
+}
+
+/* Botón */
+
+.wedding-hero__button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 2.8rem;
+
+  padding: 1rem 2.2rem;
+
+  color: var(--color-blue-700);
+
+  background: var(--color-white);
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  font-size: 0.68rem;
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+
+  transition:
+    background var(--transition-normal),
+    color var(--transition-normal),
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.wedding-hero__button:hover {
+  color: var(--color-white);
+
+  background: var(--color-lavender-500);
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(48, 79, 126, 0.25);
+}
+
+/* Scroll */
+
+.wedding-hero__scroll {
+  position: absolute;
+
+  z-index: 3;
+
+  left: 50%;
+  bottom: 20px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 8px;
+
+  color: var(--color-white);
+
+  font-size: 0.58rem;
+  font-weight: 500;
+
+  letter-spacing: 0.25em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.wedding-hero__scroll-line {
+  width: 1px;
+  height: 35px;
+
+  background:
+    rgba(255, 255, 255, 0.7);
+
+  animation:
+    weddingScrollAnimation 2s ease-in-out infinite;
+}
+
+/* Animaciones */
+
+@keyframes weddingHeroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes weddingScrollAnimation {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+
+  51% {
+    transform-origin: bottom;
+  }
+
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+  .wedding-hero__content {
+    width: min(92%, 500px);
+
+    padding-bottom: 75px;
+  }
+
+  .wedding-hero {
+    background-position: 60% center;
+  }
+
+  .wedding-hero__eyebrow {
+    margin-bottom: 1.25rem;
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.3em;
+  }
+
+  .wedding-hero__names {
+    font-size: clamp(4rem, 19vw, 6rem);
+  }
+
+  .wedding-hero__date {
+    margin-top: 2rem;
+
+    font-size: 0.68rem;
+
+    letter-spacing: 0.25em;
+  }
+
+  .wedding-hero__message {
+    padding: 0 20px;
+
+    font-size: 1.35rem;
+  }
+
+  .wedding-hero__button {
+    margin-top: 2.2rem;
+
+    padding: 0.95rem 1.7rem;
+  }
+
+  .wedding-hero__scroll {
+    bottom: 20px;
+  }
+}

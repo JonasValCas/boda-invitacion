@@ -1,0 +1,68 @@
+.rsvp-page {
+  min-height: 100vh;
+
+  padding: 7rem 1.25rem;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(201, 184, 232, 0.28),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 90%,
+      rgba(73, 111, 168, 0.12),
+      transparent 30%
+    ),
+    var(--color-white-soft);
+}
+
+.rsvp-page__container {
+  width: min(100%, 760px);
+
+  margin: 0 auto;
+}
+
+.rsvp-page__header {
+  margin-bottom: 3rem;
+
+  text-align: center;
+}
+
+.rsvp-page__eyebrow {
+  margin-bottom: 1rem;
+
+  color: var(--color-blue-500);
+
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  letter-spacing: 0.35em;
+
+  text-transform: uppercase;
+}
+
+.rsvp-page__title {
+  margin-bottom: 1rem;
+
+  color: var(--color-blue-700);
+
+  font-family: var(--font-display);
+
+  font-size: clamp(2.8rem, 8vw, 4.5rem);
+
+  font-weight: 400;
+  line-height: 1;
+}
+
+.rsvp-page__description {
+  width: min(100%, 560px);
+
+  margin: 0 auto;
+
+  color: var(--color-text-soft);
+
+  font-size: 0.9rem;
+
+  line-height: 1.8;
+}

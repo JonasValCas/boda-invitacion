@@ -1,0 +1,55 @@
+:root {
+  /* ========================================
+     COLORS
+  ======================================== */
+
+  --color-white: #ffffff;
+  --color-white-soft: #faf9fd;
+
+  --color-lavender-50: #f7f4fc;
+  --color-lavender-100: #eee9f8;
+  --color-lavender-200: #ddd3ee;
+  --color-lavender-300: #c9b8e8;
+  --color-lavender-400: #b19ad8;
+  --color-lavender-500: #9479c4;
+
+  --color-blue-400: #718fbd;
+  --color-blue-500: #496fa8;
+  --color-blue-600: #3d6094;
+  --color-blue-700: #304f7e;
+
+  --color-text: #30384a;
+  --color-text-soft: #737b8d;
+
+  /* ========================================
+     TYPOGRAPHY
+  ======================================== */
+
+  --font-display:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  --font-body:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  /* ========================================
+     SPACING
+  ======================================== */
+
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* ========================================
+     TRANSITIONS
+  ======================================== */
+
+  --transition-fast: 200ms ease;
+  --transition-normal: 350ms ease;
+  --transition-slow: 700ms ease;
+}
