@@ -16,7 +16,7 @@
       rgba(48, 79, 126, 0.82),
       rgba(148, 121, 196, 0.68)
     ),
-    url("./assets/fondo.png")
+    url("../../assets/fondo.png")
       center center / cover no-repeat;
 }
 
@@ -32,7 +32,7 @@
     radial-gradient(
       circle at center,
       rgba(255, 255, 255, 0.08),
-      rgba(48, 79, 126, 0.25)
+      rgba(48, 79, 126, 0.10)
     );
 
   pointer-events: none;
