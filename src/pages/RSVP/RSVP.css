@@ -1,8 +1,6 @@
 .rsvp-page {
   min-height: 100vh;
-
   padding: 7rem 1.25rem;
-
   background:
     radial-gradient(
       circle at 10% 10%,
@@ -15,54 +13,180 @@
       transparent 30%
     ),
     var(--color-white-soft);
+  box-sizing: border-box;
 }
 
 .rsvp-page__container {
-  width: min(100%, 760px);
-
+  width: min(100%, 1100px);
   margin: 0 auto;
 }
 
 .rsvp-page__header {
   margin-bottom: 3rem;
-
   text-align: center;
 }
 
 .rsvp-page__eyebrow {
   margin-bottom: 1rem;
-
   color: var(--color-blue-500);
-
   font-size: 0.7rem;
   font-weight: 600;
-
   letter-spacing: 0.35em;
-
   text-transform: uppercase;
 }
 
 .rsvp-page__title {
   margin-bottom: 1rem;
-
   color: var(--color-blue-700);
-
   font-family: var(--font-display);
-
   font-size: clamp(2.8rem, 8vw, 4.5rem);
-
   font-weight: 400;
   line-height: 1;
 }
 
 .rsvp-page__description {
   width: min(100%, 560px);
-
   margin: 0 auto;
-
   color: var(--color-text-soft);
-
   font-size: 0.9rem;
-
   line-height: 1.8;
+}
+
+/* Dos columnas: información a la izquierda y formulario a la derecha */
+
+.rsvp-page__content {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
+  gap: 2.5rem;
+}
+
+.rsvp-page__form {
+  min-width: 0;
+}
+
+/* Información de regalos y colores */
+
+.rsvp-info {
+  min-width: 0;
+  width: 100%;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(174, 157, 207, 0.25);
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(60, 55, 90, 0.06);
+}
+
+.rsvp-info__gifts,
+.rsvp-info__colors {
+  padding: 1rem 0;
+}
+
+.rsvp-info__gifts h2,
+.rsvp-info__colors h2 {
+  margin: 0 0 0.9rem;
+  color: var(--color-blue-700);
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.rsvp-info__gifts p,
+.rsvp-info__colors p {
+  max-width: 420px;
+  margin: 0 auto 1.1rem;
+  color: var(--color-text-soft);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.rsvp-info__address {
+  display: inline-block;
+  max-width: 100%;
+  color: #62517f;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.8;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
+}
+
+.rsvp-info__address:hover {
+  color: #394f91;
+}
+
+.rsvp-info__divider {
+  width: 65%;
+  height: 1px;
+  margin: 1.5rem auto;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(98, 81, 127, 0.3),
+    transparent
+  );
+}
+
+.rsvp-info__palette {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.rsvp-info__color {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  padding: 0.75rem 1.25rem;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.rsvp-info__color--lavender {
+  background-color: #633da9;
+  color: #e1dde7;
+}
+
+.rsvp-info__color--blue {
+  background-color: #2b2979;
+  color: #e9ecef;
+}
+
+/* Diseño para móviles y pantallas pequeñas */
+
+@media (max-width: 768px) {
+  .rsvp-page {
+    padding: 5rem 1rem;
+  }
+
+  .rsvp-page__container {
+    width: 100%;
+  }
+
+  .rsvp-page__header {
+    margin-bottom: 2rem;
+  }
+
+  .rsvp-page__content {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .rsvp-info {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .rsvp-info__gifts h2,
+  .rsvp-info__colors h2 {
+    font-size: 1.5rem;
+  }
 }

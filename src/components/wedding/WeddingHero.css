@@ -67,21 +67,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
 
   font-family: var(--font-display);
 
   font-size: clamp(4.5rem, 11vw, 9rem);
 
   font-weight: 400;
-  line-height: 0.82;
+  line-height: 0.80;
 
   letter-spacing: -0.03em;
 }
 
-.wedding-hero__ampersand {
-  display: block;
+.wedding-heroname { 
+  display: inline-block; 
+}
 
-  margin: 0.25rem 0;
+.wedding-hero__ampersand {
+  display: inline-block;
+
+  margin: 0;
+  flex-shrink: 0;
 
   color: var(--color-lavender-200);
 
@@ -89,6 +96,7 @@
   font-weight: 300;
 
   line-height: 1.2;
+  text-align: center;
 }
 
 .wedding-hero__date {

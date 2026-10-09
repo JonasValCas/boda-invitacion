@@ -12,11 +12,15 @@ function WeddingHero() {
         </p>
 
         <h1 className="wedding-hero__names">
-          Jonathan
+          <span className="wedding-hero__name">
+            Jonathan
+          </span>
           <span className="wedding-hero__ampersand">
             &amp;
           </span>
-          Damaris
+          <span className="wedding-hero__name">
+            Damaris
+          </span>
         </h1>
 
         <p className="wedding-hero__date">
